@@ -3,10 +3,10 @@
 ```
 minigoapi/ folder structure
 ├── cmd/                # Main app entry (main.go is here)
-│   └── api/
+│   └── http/
 │       └── main.go
 ├── internal/           # business logic for internal (other domains cannot access here)
-│   ├── user/           # A sample domain
+│   ├── userapi/           # A sample domain
 │   │   ├── handler.go      # HTTP layer
 │   │   ├── service.go      # Business logic
 │   │   ├── repository.go   # DB repos
