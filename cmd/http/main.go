@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/abgsatman/mini-go-framework/internal/userapi"
+	"github.com/abgsatman/mini-go-framework/internal/http/userapi"
 	"github.com/gorilla/mux"
 )
 

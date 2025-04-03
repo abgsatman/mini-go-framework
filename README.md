@@ -6,12 +6,13 @@ mini-go-framework/ folder structure
 │   └── http/
 │       └── main.go
 ├── internal/           # business logic for internal (other domains cannot access here)
-│   ├── userapi/           # A sample domain
-│   │   ├── handler.go      # HTTP layer
-│   │   ├── service.go      # Business logic
-│   │   ├── repository.go   # DB repos
-│   │   └── model.go        # Data models
-│   └── ...
+│   └── http/
+│       └── userapi/           # A sample domain
+│           ├── handler.go      # HTTP layer
+│           ├── service.go      # Business logic
+│           ├── repository.go   # DB repos
+│           ├── model.go        # Data models
+│           └── ...
 ├── pkg/               # utility codes may be used for someone else as well
 │   └── logger/
 │       └── logger.go
