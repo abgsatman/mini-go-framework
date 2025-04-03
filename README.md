@@ -20,6 +20,12 @@ mini-go-framework/ folder structure
 ├── api/               # Docs like Swagger/OpenAPI, Postman
 ├── scripts/           # Build, deploy, migration scripts
 ├── docs/              # Technical documentation
+├── test/              # Test scripts etc...
+├── assets/
+│   ├── pages/
+│   ├── css/
+│   ├── js/
+│   └── images/
 ├── go.mod
 ├── go.sum
 └── README.md
