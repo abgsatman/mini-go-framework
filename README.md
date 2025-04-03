@@ -17,6 +17,9 @@ mini-go-framework/ folder structure
 │   └── logger/
 │       └── logger.go
 ├── configs/           # Config files (.env, yml, vs.)
+│   ├── dev.env
+│   ├── prod.envv
+│   └── test.env
 ├── api/               # Docs like Swagger/OpenAPI, Postman
 ├── scripts/           # Build, deploy, migration scripts
 ├── docs/              # Technical documentation
