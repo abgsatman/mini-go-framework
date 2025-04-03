@@ -23,3 +23,8 @@ mini-go-framework/ folder structure
 ├── go.sum
 └── README.md
 ```
+
+Command
+```
+$ go run ./cmd/http //running for http domain
+```
