@@ -1,5 +1,6 @@
 # minigoapi
 
+```
 minigoapi/ folder structure
 ├── cmd/                # Main app entry (main.go is here)
 │   └── api/
@@ -21,3 +22,4 @@ minigoapi/ folder structure
 ├── go.mod
 ├── go.sum
 └── README.md
+```
