@@ -2,16 +2,14 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 
 	"github.com/abgsatman/minigoapi/internal/handler"
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	fmt.Println("Mini GO API")
-
-	http.HandleFunc("/hc", handler.HcHandler)
-	http.ListenAndServe(":8080", nil)
+	r := mux.NewRouter()
+	r.HandleFunc("/hc", handler.HcHandler).Methods("GET")
 
 	fmt.Println("Server is running at localhost:8080")
 }
