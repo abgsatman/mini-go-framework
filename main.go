@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println("Mini GO API")
+	fmt.Println("Mini GO FRAMEWORK")
 }

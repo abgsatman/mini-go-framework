@@ -1,7 +1,7 @@
-# minigoapi
+# Mini Go Framework
 
 ```
-minigoapi/ folder structure
+mini-go-framework/ folder structure
 ├── cmd/                # Main app entry (main.go is here)
 │   └── http/
 │       └── main.go

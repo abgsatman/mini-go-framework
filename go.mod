@@ -1,4 +1,4 @@
-module github.com/abgsatman/minigoapi
+module github.com/abgsatman/mini-go-framework
 
 go 1.23.2
 
