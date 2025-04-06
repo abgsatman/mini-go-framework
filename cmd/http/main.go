@@ -19,5 +19,8 @@ func main() {
 	router.HandleFunc("/createuser", handler.CreateUser).Methods("POST")
 
 	fmt.Println("Server is running at localhost:8080")
-	http.ListenAndServe(":8080", router)
+	err := http.ListenAndServe(":8080", router)
+	if err != nil {
+		return
+	}
 }

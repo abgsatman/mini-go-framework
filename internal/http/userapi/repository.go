@@ -3,6 +3,7 @@ package userapi
 import (
 	"context"
 	"errors"
+	"fmt"
 )
 
 type UserRepository interface {
@@ -23,11 +24,19 @@ func NewInMemoryUserRepository() *InMemoryUserRepository {
 
 func (r *InMemoryUserRepository) GetAllUsers(ctx context.Context) ([]*User, error) {
 	var users []*User
+
+	//check the map if it is ok
+	//fmt.Println("the message from repo/getallusers is:", len(r.users), r.users[0].Name)
+
+	for id := 0; id < len(r.users); id++ {
+		users = append(users, r.users[int64(id)])
+	}
+
 	return users, nil
 }
 
 func (r *InMemoryUserRepository) GetUserById(ctx context.Context, id int64) (*User, error) {
-	user, ok := r.users[int64(id)]
+	user, ok := r.users[id]
 	if !ok {
 		return nil, errors.New("user not found")
 	}
@@ -36,7 +45,7 @@ func (r *InMemoryUserRepository) GetUserById(ctx context.Context, id int64) (*Us
 }
 
 func (r *InMemoryUserRepository) CreateUser(ctx context.Context, user *User) error {
-	r.users[int64(user.ID)] = user
-
+	r.users[user.ID] = user
+	fmt.Println("the message from /repo/createuser is:", user)
 	return nil
 }
