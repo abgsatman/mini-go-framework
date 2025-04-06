@@ -3,7 +3,6 @@ package userapi
 import (
 	"context"
 	"errors"
-	"fmt"
 )
 
 type UserRepository interface {
@@ -45,7 +44,14 @@ func (r *InMemoryUserRepository) GetUserById(ctx context.Context, id int64) (*Us
 }
 
 func (r *InMemoryUserRepository) CreateUser(ctx context.Context, user *User) error {
-	r.users[user.ID] = user
-	fmt.Println("the message from /repo/createuser is:", user)
+	if _, exists := r.users[int64(user.ID)]; exists {
+		return errors.New("user with this ID already exists")
+	}
+
+	if user.Name == "" {
+		return errors.New("name is required")
+	}
+
+	r.users[int64(user.ID)] = user
 	return nil
 }
